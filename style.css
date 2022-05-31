@@ -162,7 +162,7 @@ h3 {
 }
 
 #s1.active::after {
-    content: '1';
+    content: 'мойка фасада';
 }
 
 #s2{
@@ -171,7 +171,7 @@ h3 {
 }
 
 #s2.active::after {
-    content: '2';
+    content: 'ремонт фасада';
 }
 
 #s3{
@@ -184,21 +184,21 @@ h3 {
 }
 
 #s4{
-    background: url(./assets/img/moika.jpg) no-repeat center center;
+    background: url(./assets/img/krasim.jpg) no-repeat center center;
     background-size: cover;
 }
 
 #s4.active::after {
-    content: '4';
+    content: 'покраска фасада';
 }
 
 #s5{
-    background: url(./assets/img/remont.jpg) no-repeat center center;
+    background: url(./assets/img/uteplenie.jpg) no-repeat center center;
     background-size: cover;
 }
 
 #s5.active::after {
-    content: '5';
+    content: 'утепление фасада';
 }
 
 
