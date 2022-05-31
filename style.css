@@ -3,12 +3,12 @@
     --color-dark:#000000;
     --color-gray-3xl: #737373;
     --color-gray-xl: #969696;
-    --color-gray-l: #cdcdcd;    
-    --color-gray-lite: #f0f0f0;    
-    --color-blue: #00a5dc;   
-    --color-green: #2db928;   
+    --color-gray-l: #cdcdcd;
+    --color-gray-lite: #f0f0f0;
+    --color-blue: #00a5dc;
+    --color-green: #2db928;
 }
-  
+
 *,
 ::before,
 ::after {
@@ -27,14 +27,14 @@ a {
     text-decoration: none;
     color: inherit;
     font-family: 'Open Sans', sans-serif;
-    font-size: calc(.8em + .5vw);  
+    font-size: calc(.8em + .5vw);
     font-style: italic;
 }
 
 a:hover{
     cursor: pointer;
     color: var(--color-red);
-    transition: all .4s;     
+    transition: all .4s;
 }
 
 .header__inner  {
@@ -69,8 +69,8 @@ h3 {
     font-size: calc(.8em + .5vw);
     color: var(--color-gray-lite);
     text-transform: uppercase;
-    font-family: 'Viga', sans-serif;  
-    color: var(--color-gray-lite);  
+    font-family: 'Viga', sans-serif;
+    color: var(--color-gray-lite);
     font-weight: 700;
 }
 
@@ -83,33 +83,77 @@ h3 {
 
 .intro {
     min-height: 100vh;
-    background: center center no-repeat; 
-    background-image: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)), url(./assets/img/fon2.jpg);    
-    background-size: cover;    
+    background: center center no-repeat;
+    background-image: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)), url(./assets/img/fon2.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.slider__content{    
+.slider{
+    padding: 100px 0;
+
+}
+
+.slider__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.slider__content{
+    width: 100%;
     display: flex;
     gap: 1%;
     justify-content: center;
     padding: 0;
+
 }
 
-.slide {        
-    aspect-ratio: 16 / 9;   
+.slide {
+    position: relative;
+    aspect-ratio: 16 / 9;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-basis: 10%;
-    transition: all .3s linear
+    flex-basis: 3%;
+    opacity: .3;
 }
 
-.slide:hover,
-.active {
+.slide:hover {
+    opacity: 1;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.slide.active::after {
+    animation-name: slideText;
+    animation-duration: 1s;
+    content: 'ererere';
+    position: absolute;
+    bottom: 2em;
+    left: 2em;
+    background-color: var(--color-red);
+    color: var(--color-gray-lite);
+    padding: .8em;
+    border-radius: .2em;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: .8em;
+
+}
+
+.slide.active {
     flex-basis: 100%;
-    border-radius: 3px;    
+    border-radius: .3em;
     -webkit-box-shadow: 0 0 .8rem .4rem var(--color-dark);
-    box-shadow: 0 0 .8rem .4rem var(--color-dark);
+    box-shadow: 0 0 .8rem .4rem var(--color-gray-lite);
+    opacity: 1;
+    animation-name: slide;
+    animation-duration: 1s;
 }
 
 #s1{
@@ -117,22 +161,102 @@ h3 {
     background-size: cover;
 }
 
+#s1.active::after {
+    content: 'мойка фасада';
+}
+
 #s2{
     background: url(./assets/img/remont.jpg) no-repeat center center;
     background-size: cover;
 }
+
+#s2.active::after {
+    content: 'ремонт фасада';
+}
+
 #s3{
     background: url(./assets/img/shvy.jpg) no-repeat center center;
     background-size: cover;
 }
+
+#s3.active::after {
+    content: 'герметизация швов';
+}
+
 #s4{
-    background: url(./assets/img/moika.jpg) no-repeat center center;
+    background: url(./assets/img/krasim.jpg) no-repeat center center;
     background-size: cover;
 }
+
+#s4.active::after {
+    content: 'покраска фасада';
+}
+
 #s5{
-    background: url(./assets/img/remont.jpg) no-repeat center center;
+    background: url(./assets/img/uteplenie.jpg) no-repeat center center;
     background-size: cover;
 }
 
+#s5.active::after {
+    content: 'утепление фасада';
+}
 
-  
+
+@keyframes slideText {
+    from {
+      transform: translate(0, 100%);
+      opacity: 0;
+    }
+    to {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+}
+
+@keyframes slide {
+    from {
+      transform: translate(1%, 0);
+      opacity: 0;
+    }
+    to {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+}
+
+.slider__kontrols {
+    display: flex;
+    color: var(--color-gray-lite);
+    margin-top: 3em;
+    gap: 1.5em;
+}
+
+.slider_kontrol {
+    width: 1em;
+    height: 1em;
+    background-color: var(--color-gray-lite);
+    border-radius: 1em;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.slider_kontrol:hover {
+    background-color: var(--color-red);
+}
+
+.slider_kontrol.active {
+    width: 5em;
+    background-color: var(--color-red);
+    animation-name: kontrol;
+    animation-duration: 5s;
+    cursor: auto;
+}
+
+@keyframes kontrol {
+    from {
+        width: 1em;
+          }
+    to {
+        width: 5em;
+    }
+}
