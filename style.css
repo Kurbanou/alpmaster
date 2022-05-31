@@ -143,13 +143,14 @@ h3 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: .8em;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
 
 }
 
 .slide.active {
     flex-basis: 100%;
     border-radius: .3em;
-    -webkit-box-shadow: 0 0 .8rem .4rem var(--color-dark);
+    -webkit-box-shadow: 0 0 .8rem .4rem var(--color-gray-lite);
     box-shadow: 0 0 .8rem .4rem var(--color-gray-lite);
     opacity: 1;
     animation-name: slide;
@@ -226,7 +227,6 @@ h3 {
 
 .slider__kontrols {
     display: flex;
-    color: var(--color-gray-lite);
     margin-top: 3em;
     gap: 1.5em;
 }
