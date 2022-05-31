@@ -85,7 +85,14 @@ h3 {
     min-height: 100vh;
     background: center center no-repeat; 
     background-image: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)), url(./assets/img/fon2.jpg);    
-    background-size: cover;    
+    background-size: cover;   
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+
+.slider{
+    padding: 100px 0;
 }
 
 .slider__content{    
