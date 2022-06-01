@@ -58,6 +58,25 @@ a:hover{
     fill:var(--color-red);
 }
 
+.insta {
+    fill:var(--color-gray-lite); 
+    transition: all .3s;   
+}
+
+.istagram:hover .insta {
+    fill:var(--color-red);
+}
+
+.istagram {
+    width: calc(.8em + .5vw);
+    cursor: pointer;
+}
+
+.contacts {
+    display: flex;
+    gap: 1em;
+}
+
 h1 {
     font-size: calc(1em + .8vw);
     color: var(--color-gray-lite);
