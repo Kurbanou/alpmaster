@@ -30,6 +30,8 @@ a {
     font-family: 'Open Sans', sans-serif;
     font-size: calc(.8em + .5vw);
     font-style: italic;
+    display: flex;
+    align-items: center;
 }
 
 a:hover{
@@ -74,6 +76,7 @@ a:hover{
 
 .contacts {
     display: flex;
+    align-items: center;
     gap: 1em;
 }
 
