@@ -1,5 +1,6 @@
 const slides = document.querySelectorAll('.slide'),
-      kontrols = document.querySelectorAll('.slider_kontrol');
+      kontrols = document.querySelectorAll('.slider_kontrol'),
+      inKontrols = document.querySelectorAll('.in_kontrol');
 
 
 
@@ -49,7 +50,16 @@ slides.forEach((element, i) => {
     })
 });
 
-kontrols.forEach((element, i) => {
+// kontrols.forEach((element, i) => {
+//     element.addEventListener('click', () => {
+//         index = i;
+//         active(index);
+//         clearInterval(timerId);
+//         timerId = setInterval(nextslide, time);
+//     })
+// });
+
+inKontrols.forEach((element, i) => {
     element.addEventListener('click', () => {
         index = i;
         active(index);
