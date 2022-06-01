@@ -232,17 +232,16 @@ h3 {
 }
 
 .slider_kontrol {
-    width: 1em;
-    height: 1em;
+    width: .3em;
+    height: .3em;
     background-color: var(--color-gray-lite);
-    border-radius: 1em;
-    cursor: pointer;
+    border-radius: .3em;   
     transition: all .3s;
+    margin: 20px;
+    user-select: none;
 }
 
-.slider_kontrol:hover {
-    background-color: var(--color-red);
-}
+
 
 .slider_kontrol.active {
     width: 5em;
@@ -259,4 +258,13 @@ h3 {
     to {
         width: 5em;
     }
+}
+
+.in_kontrol:hover {
+    cursor: pointer;         
+}
+
+.in_kontrol:hover .slider_kontrol{
+    cursor: pointer;    
+    background-color: var(--color-red);  
 }
