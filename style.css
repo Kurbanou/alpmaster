@@ -361,20 +361,17 @@ h3 {
 #awesome > li {
     counter-increment: my-awesome-counter;
     margin: 0.25rem;
-    min-height: 3em;
-    position: relative;
-    padding: .3em 1em .3em 4em;
+    min-height: 3em;    
+    padding: .3em 1em .3em .3em;
     font-family: 'Open Sans', sans-serif;
     font-size: 1em;
-    color: var(--color-gray-3xl);
-    /* text-transform: uppercase; */
-    font-size: calc(1em + .2vw);
-    /* background-color: white; */
+    color: var(--color-gray-3xl);   
+    font-size: calc(1em + .2vw);   
     background-color: var(--color-gray-lite);
     border-radius: .3em;
     margin-bottom: 2em;
-  
-  
+    display: flex;
+    align-items: center;      
 }
 
 .spisok {
@@ -392,8 +389,7 @@ h3 {
   align-items: center;
   justify-content: center; 
   color: white;
-  position: absolute;
-  left:.3em; 
-  top: .3em; 
+  margin-right: 1em;
   box-shadow: 0 0 .3em var(--color-red);
+  flex-shrink: 0;
 }
