@@ -153,8 +153,7 @@ h3 {
 
 .slide.active::after {
     animation-name: slideText;
-    animation-duration: 1s;
-    content: 'ererere';
+    animation-duration: 1s;    
     position: absolute;
     bottom: 2em;
     left: 2em;
@@ -167,7 +166,6 @@ h3 {
     font-weight: 700;
     font-size: .8em;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
-
 }
 
 .slide.active {
@@ -178,6 +176,7 @@ h3 {
     opacity: 1;
     animation-name: slide;
     animation-duration: 1s;
+    cursor: auto;
 }
 
 #s1{
@@ -266,7 +265,7 @@ h3 {
 
 
 
-.slider_kontrol.active {
+.in_kontrol.active .slider_kontrol {
     width: 5em;
     background-color: var(--color-red);
     animation-name: kontrol;
@@ -287,7 +286,15 @@ h3 {
     cursor: pointer;         
 }
 
-.in_kontrol:hover .slider_kontrol{
-    cursor: pointer;    
+.in_kontrol.active:hover {
+    cursor: auto;         
+}
+
+.in_kontrol:hover .slider_kontrol{    
     background-color: var(--color-red);  
+}
+
+.in_kontrol:active .slider_kontrol{
+    background-color: var(--color-gray-lite);  
+    box-shadow: 2px 0px 20px 30px yellow;
 }

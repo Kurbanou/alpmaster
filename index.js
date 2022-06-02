@@ -1,14 +1,9 @@
 const slides = document.querySelectorAll('.slide'),
-      kontrols = document.querySelectorAll('.slider_kontrol'),
-      inKontrols = document.querySelectorAll('.in_kontrol');
-
-
-
-
-
-let index = 0;
-let time = 3000;
-let timerId = setInterval(nextslide, time);
+      kontrols = document.querySelectorAll('.in_kontrol');
+      
+let index = 0,
+    time = 3000,
+    timerId = setInterval(nextslide, time);
 
 
 function activeSlide(n) {
@@ -40,33 +35,24 @@ function active(ind) {
     activeKontrol(ind);
 };
 
-
 slides.forEach((element, i) => {
     element.addEventListener('click', () => {
-        index = i;
-        active(index);
-        clearInterval(timerId);
-        timerId = setInterval(nextslide, time);
+        if(!element.classList.contains('active')){
+            index = i;
+            active(index);
+            clearInterval(timerId);
+            timerId = setInterval(nextslide, time);
+        }
     })
 });
 
-// kontrols.forEach((element, i) => {
-//     element.addEventListener('click', () => {
-//         index = i;
-//         active(index);
-//         clearInterval(timerId);
-//         timerId = setInterval(nextslide, time);
-//     })
-// });
-
-inKontrols.forEach((element, i) => {
+kontrols.forEach((element, i) => {
     element.addEventListener('click', () => {
-        index = i;
-        active(index);
-        clearInterval(timerId);
-        timerId = setInterval(nextslide, time);
+        if(!element.classList.contains('active')){
+            index = i;
+            active(index);
+            clearInterval(timerId);
+            timerId = setInterval(nextslide, time);
+        }
     })
 });
-
-
-
