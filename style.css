@@ -88,6 +88,18 @@ h1 {
     font-weight: 700;
 }
 
+h2 {
+    margin: 0;
+    padding: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    text-transform: uppercase;
+    line-height: 1em;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--color-dark);
+    font-size: calc(1em + .8vw);
+}
+
 h3 {
     font-size: calc(.8em + .5vw);
     color: var(--color-gray-lite);
@@ -103,6 +115,8 @@ h3 {
     padding: 0 20px;
     margin: 0 auto;
 }
+
+/* intro ****************************************************  */
 
 .intro {
     min-height: 100vh;
@@ -297,4 +311,89 @@ h3 {
 .in_kontrol:active .slider_kontrol{
     background-color: var(--color-gray-lite);  
     box-shadow: 2px 0px 20px 30px yellow;
+}
+/* section******************************************* */
+
+.section_header {
+    width: 100%;
+    max-width: 960px;
+    text-align: center;
+    padding-top: 100px;
+    margin: 0 auto;
+}
+
+.section_header h3 {
+    padding-bottom: 20px;
+}
+
+.section_header h2::after {
+    content: "";
+    display: block;
+    width: 3em;
+    height: .1em;
+    margin: 2em auto;
+    background-color: var(--color-red);
+}
+
+.section_header p {
+    font-size: 15px;
+    color: var(--color-gray-3xl);
+    font-weight: 400;
+}
+
+
+/* benefits *******************************************/
+
+
+
+.benefits {
+    min-height: 100vh;
+    /* background-color: var(--color-gray-lite); */
+    
+
+}
+
+#awesome {
+  list-style: none;
+  counter-reset: my-awesome-counter;
+}
+
+#awesome > li {
+    counter-increment: my-awesome-counter;
+    margin: 0.25rem;
+    min-height: 3em;
+    position: relative;
+    padding: .3em 1em .3em 4em;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    color: var(--color-gray-3xl);
+    /* text-transform: uppercase; */
+    font-size: calc(1em + .2vw);
+    /* background-color: white; */
+    background-color: var(--color-gray-lite);
+    border-radius: .3em;
+    margin-bottom: 2em;
+  
+  
+}
+
+.spisok {
+    display: flex;
+    justify-content: center;
+}
+
+#awesome > li::before {
+  content: counter(my-awesome-counter);
+  background: var(--color-red);
+  width: 3rem;
+  height: 3rem;
+  border-radius: .3em;
+  display: flex;  
+  align-items: center;
+  justify-content: center; 
+  color: white;
+  position: absolute;
+  left:.3em; 
+  top: .3em; 
+  box-shadow: 0 0 .3em var(--color-red);
 }
