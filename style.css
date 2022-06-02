@@ -61,8 +61,8 @@ a:hover{
 }
 
 .insta {
-    fill:var(--color-gray-lite); 
-    transition: all .3s;   
+    fill:var(--color-gray-lite);
+    transition: all .3s;
 }
 
 .istagram:hover .insta {
@@ -167,7 +167,7 @@ h3 {
 
 .slide.active::after {
     animation-name: slideText;
-    animation-duration: 1s;    
+    animation-duration: 1s;
     position: absolute;
     bottom: 2em;
     left: 2em;
@@ -271,7 +271,7 @@ h3 {
     width: .3em;
     height: .3em;
     background-color: var(--color-gray-lite);
-    border-radius: .3em;   
+    border-radius: .3em;
     transition: all .3s;
     margin: 20px;
     user-select: none;
@@ -297,19 +297,19 @@ h3 {
 }
 
 .in_kontrol:hover {
-    cursor: pointer;         
+    cursor: pointer;
 }
 
 .in_kontrol.active:hover {
-    cursor: auto;         
+    cursor: auto;
 }
 
-.in_kontrol:hover .slider_kontrol{    
-    background-color: var(--color-red);  
+.in_kontrol:hover .slider_kontrol{
+    background-color: var(--color-red);
 }
 
 .in_kontrol:active .slider_kontrol{
-    background-color: var(--color-gray-lite);  
+    background-color: var(--color-gray-lite);
     box-shadow: 2px 0px 20px 30px yellow;
 }
 /* section******************************************* */
@@ -349,7 +349,7 @@ h3 {
 .benefits {
     min-height: 100vh;
     /* background-color: var(--color-gray-lite); */
-    
+
 
 }
 
@@ -361,17 +361,17 @@ h3 {
 #awesome > li {
     counter-increment: my-awesome-counter;
     margin: 0.25rem;
-    min-height: 3em;    
+    min-height: 3em;
     padding: .3em 1em .3em .3em;
     font-family: 'Open Sans', sans-serif;
     font-size: 1em;
-    color: var(--color-gray-3xl);   
-    font-size: calc(1em + .2vw);   
+    color: var(--color-gray-3xl);
+    font-size: calc(1em + .2vw);
     background-color: var(--color-gray-lite);
     border-radius: .3em;
     margin-bottom: 2em;
     display: flex;
-    align-items: center;      
+    align-items: center;
 }
 
 .spisok {
@@ -385,11 +385,58 @@ h3 {
   width: 3rem;
   height: 3rem;
   border-radius: .3em;
-  display: flex;  
+  display: flex;
   align-items: center;
-  justify-content: center; 
+  justify-content: center;
   color: white;
   margin-right: 1em;
   box-shadow: 0 0 .3em var(--color-red);
   flex-shrink: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* footer +++++++++++++++++++++++++++++++++++++++++ */
+footer {
+    /* background-color: var(--color-gray-l); */
+}
+
+.footer__inner {
+    border-top: solid .1em var(--color-gray-3xl);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 4em 0;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.footer__inner a {
+    font-family: inherit;
+    font-style: inherit;
+    font-size: inherit;
+}
+
+@media (max-width: 1000px){
+    .footer__inner {
+        justify-content: center;
+        gap: .5em;
+    }
 }
