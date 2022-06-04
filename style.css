@@ -21,6 +21,7 @@ header {
     position: absolute;
     top: 0;
     width: 100%;
+    /* background:rgba(0, 0, 0, .1); */
     background:rgba(255, 255, 255, .1);
 }
 
@@ -120,7 +121,9 @@ h3 {
 .intro {
     min-height: 100vh;
     background: center center no-repeat;
-    background-image: linear-gradient(rgba(0, 0, 0, .9), rgba(255, 255, 255, .5)), url(./assets/img/fon2.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, .9),
+        rgba(0, 0, 0, .1)),
+        url(./assets/img/fon2.jpg);
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -455,7 +458,7 @@ ol {
     font-family: 'Roboto', sans-serif;
     font-size: calc(.6em + .2vw);
     font-weight: 400;
-    color: var(--color-gray-xl);
+    color: var(--color-gray-3xl);
 }
 
 .footer__inner a {
