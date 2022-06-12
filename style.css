@@ -411,20 +411,26 @@ ol {
 }
 
 .item {
-    display: flex;
-    gap: 1em;
+    /* display: flex;
+    gap: 1em; */
     padding: .3em;
 
 }
 
+.leftimg {
+    float:left; /* Выравнивание по левому краю */
+    margin: .3em .6em .3em 0; /* Отступы вокруг картинки */
+}
+
+.rightimg  {
+    float: right; /* Выравнивание по правому краю  */
+    margin: .3em  0 .3em .6em; /* Отступы вокруг картинки */
+}
+
 .item img {
-    width: 3em;
-    height: 3em;
     display: block;
-    background-color: var(--color-red);
-    padding: .3em;
     border-radius: .3em;
-    box-shadow: 0 0 .3em var(--color-red);
+    box-shadow: 0 0 .3em var(--color-dark);
 
 }
 
