@@ -548,6 +548,8 @@ ol {
     flex-direction: column;
     gap: 1em;
     flex-shrink: 2;
+    animation-name: Content;
+    animation-duration: .8s;
 }
 
 
@@ -556,6 +558,8 @@ ol {
     border-radius: 0.3em;
     box-shadow: 0 0 0.3em var(--color-dark);
     cursor: auto;
+    animation-name: Img;
+    animation-duration: .8s;
 }
 
 @media (max-width: 1000px){
@@ -592,4 +596,23 @@ ol {
 .close_btn:hover{
     color: var(--color-red);
     transform: scale(1.2)
+}
+
+
+@keyframes Img {
+    from {
+      transform: translate(10%, 0);
+    }
+    to {
+      transform: translate(0, 0);
+    }
+}
+
+@keyframes Content {
+    from {
+      transform: translate(-10%, 0);
+    }
+    to {
+      transform: translate(0, 0);
+    }
 }
