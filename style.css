@@ -591,6 +591,8 @@ ol {
     color: var(--color-dark);
     padding: .3em;
     user-select: none;
+    animation-name: Close;
+    animation-duration: .8s;
 }
 
 .close_btn:hover{
@@ -602,17 +604,33 @@ ol {
 @keyframes Img {
     from {
       transform: translate(10%, 0);
+      opacity: 0;
     }
     to {
       transform: translate(0, 0);
+      opacity: 1;
     }
 }
 
 @keyframes Content {
     from {
       transform: translate(-10%, 0);
+      opacity: 0;
     }
     to {
       transform: translate(0, 0);
+      opacity: 1;
+    }
+}
+
+
+@keyframes Close {
+    from {
+      opacity: 0;
+      transform: scale(.5);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
     }
 }
