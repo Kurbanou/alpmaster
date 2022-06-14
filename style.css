@@ -347,7 +347,7 @@ h3 {
 
 
 
-.benefits {
+.gray {
     padding: 5em 0;
     background-color: var(--color-gray-lite);
 }
@@ -399,7 +399,7 @@ ol {
 
 /* works */
 
-.work {
+.lite {
     padding: 5em 0;
 }
 
@@ -479,3 +479,54 @@ ol {
         gap: .5em;
     }
 }
+
+/* Gallery */
+
+.gallery__inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+
+}
+
+.gallery__img {
+    width: 150px;
+    border-radius: 0.3em;
+    box-shadow: 0 0 0.3em var(--color-dark);
+}
+
+.gallery__img:hover {
+    cursor: pointer;
+    box-shadow: none;
+    transition: all .5s;    
+}
+
+.gallery {
+    position: relative;
+    padding: .2em;
+}
+
+.popup {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #2db928;
+    display: flex;
+    padding: 1em;
+    gap: 1em;
+}
+
+
+
+.img img {
+    width: 100%;
+}
+
+
+
