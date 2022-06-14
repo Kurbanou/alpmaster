@@ -117,9 +117,10 @@ h4 {
     text-transform: uppercase;
     line-height: 1em;
     font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: var(--color-dark);
-    font-size: calc(1em + .4vw);
-    font-weight: 400;
+    font-size: calc(.8em + .2vw);
+    font-weight: 600;
 }
 
 p {
@@ -463,6 +464,10 @@ ol {
     text-align: justify;
 }
 
+.text h4{
+    margin-bottom: 1em;
+}
+
 .leftimg {
     order: 1;
 }
@@ -524,7 +529,7 @@ ol {
 .gallery__img:hover {
     cursor: pointer;
     box-shadow: none;
-    transition: all .5s;    
+    transition: all .5s;
 }
 
 .gallery {
@@ -532,24 +537,25 @@ ol {
     padding: 1em;
 }
 
-.popup {    
+.popup {
     background-color: #ffffff;
-    display: flex;   
-    gap: 1em;    
+    display: flex;
+    gap: 1em;
 }
 
 .content {
     display: flex;
     flex-direction: column;
-    gap: 1em; 
-    flex-shrink: 2;   
+    gap: 1em;
+    flex-shrink: 2;
 }
 
 
-.img img {
-   width: 100%;
-   border-radius: 0.3em;
+.img .gallery__img {
+    width: 100%;
+    border-radius: 0.3em;
     box-shadow: 0 0 0.3em var(--color-dark);
+    cursor: auto;
 }
 
 @media (max-width: 1000px){
@@ -564,7 +570,7 @@ ol {
     .img img {
         width: 100%;
      }
-  
+
 }
 
 .close {
@@ -577,12 +583,13 @@ ol {
     right: 20px;
     top: -50px;
     cursor: pointer;
-    transition: all .3s;   
-    color: var(--color-dark);  
-    padding: .3em;  
+    transition: all .3s;
+    color: var(--color-dark);
+    padding: .3em;
     user-select: none;
 }
 
 .close_btn:hover{
-    color: var(--color-red);    
+    color: var(--color-red);
+    transform: scale(1.2)
 }
