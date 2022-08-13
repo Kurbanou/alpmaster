@@ -1,3 +1,7 @@
+@import url(./assets/css/phone.css);
+@import url(./assets/css/form.css);
+@import url(./assets/css/popup.css);
+
 :root{
     --color-red: #ff2d37;
     --color-dark:#000000;
