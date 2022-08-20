@@ -43,8 +43,9 @@
           animation: popup-animation 0.8s ease-out forwards;
   }
 .popup__content{
-  width: 50vh;
-  padding: 30px;
+
+  animation: animate_border 5s ease infinite, animate_gradient 5s ease infinite ;
+  padding: 3%;
   position: relative;
   background-color: var(--bg-popup);
   color: var(--color-popup);
@@ -52,23 +53,53 @@
   transform: translate3d(0, 36px, 0);
   overflow-y: auto;
   overflow-x: hidden;
-  height: 50vh;
+  border-radius: 3px;
+  max-width: 320px;
 }
+
 .popup_open .popup__content{
     opacity: 1;
     transform: translate3d(0, 0, 0);
     transition: transform 0.2s ease-out, opacity 0.2s ease-out;
 }
+
+.cls {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+
+}
+
 .x{
-  color: var(--color-popup);
-  font-size: 16px;
-  line-height: 10px;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  text-decoration: none !important;
-  z-index: 999;
+  position: relative;
   cursor: pointer;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #ff2d37;
+  width: fit-content;
+  transition: all .3s linear;
+}
+
+.x::after{
+  content: '';
+  width: 27.2px;
+  height: 27.2px;
+  position: absolute;
+  top: 0;
+  left: -50%;
+  opacity: 0.8;
+  border: #ff2d37 solid 2px;
+  border-radius: 100%;
+  opacity: 0;
+  transition: all .3s linear;
+}
+
+
+
+.x:hover::after {
+  opacity: 1;
+
 }
 
 @-webkit-keyframes popup-animation {
@@ -133,4 +164,19 @@
     padding-bottom: 0;
     border-radius: 0;
   }
+}
+
+
+
+
+@keyframes animate_border {
+0% {
+  border-radius: 10% 8% 7% 11%/10% 7% 11% 8%;
+}
+50% {
+  border-radius: 7% 10% 11% 8%/9% 10% 7% 10%;
+}
+100% {
+  border-radius: 10% 8% 7% 11%/10% 7% 11% 8%;
+}
 }

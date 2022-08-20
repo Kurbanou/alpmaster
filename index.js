@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', function(){
           kontrols = document.querySelectorAll('.in_kontrol'),
           gallery = document.querySelector('.gall'), //прячем togle 'close'
           inner = document.querySelector('.gallery__inner'),
-          icon = document.querySelector('.Phone'),
           galleryItems = [
                            {
                                title:'Утепление БЛК',
@@ -175,6 +174,6 @@ document.addEventListener('DOMContentLoaded', function(){
         })
     };
 
-    icon.addEventListener('click', openPopupInfo)
+
 
 });

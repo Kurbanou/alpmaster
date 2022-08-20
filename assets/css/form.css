@@ -1,3 +1,58 @@
 .error {
-    box-shadow: 0 0 15px red;
+    box-shadow: 0 0 15px #ff2d37;
 }
+
+.form__body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+
+
+.form__input,
+.form__button {
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+    white-space: nowrap; /* Запрещаем перенос строк */
+    overflow: hidden; /* Обрезаем все, что не помещается в область */
+    text-overflow: ellipsis; /* Добавляем многоточие */
+    appearance: none;
+    -webkit-appearance: none;
+    width: 100%;
+    border: 0px;
+    border-bottom: solid .7px #f2f2f2;
+}
+.form__input:focus {
+    outline:none;
+    border-bottom: solid 2px #ff2d37;
+
+}
+
+.form__button {
+    background-color: #fff;
+    opacity: .8;
+
+    border: #fff solid 2px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #ff2d37;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    transition: all .3s linear;
+}
+
+.form__button:hover {
+    scale: 1.2;
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+

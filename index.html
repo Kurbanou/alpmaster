@@ -217,11 +217,12 @@
     <div class="popup gameinfo">
         <div class="popup__body">
             <div class="popup__content">
-                <p class="x  reset">×</p>
+                <div class="cls"><span class="x  reset">×</span></div>
+
                 <div >
-                    <form action="#" class="form__body">
-                        <input type="text" id="name" class="form__input req" placeholder="You name">
-                        <input type="text" id="tel" class="form__input req" placeholder="Your phone">
+                    <form action="././sendmail.php" method="post" class="form__body">
+                        <input type="text" id="name" class="form__input req name" placeholder="You name">
+                        <input type="text" id="tel" class="form__input req tel" placeholder="Your phone">
                         <button type="submit" class="form__button">send</button>
                     </form>
                 </div>
@@ -231,7 +232,6 @@
     <i class="Phone is-animating"></i>
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-59RPCGB"
         height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <script  src="./assets/js/popup.js"></script>
     <script  src="./assets/js/form.js"></script>
     <script  src="./index.js"></script>
 </body>
