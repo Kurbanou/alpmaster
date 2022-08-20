@@ -2,15 +2,12 @@
   position: fixed;
   top:80%;
   right:3%;
-
-  /* position: relative; */
   cursor: pointer;
   display: block;
   margin: 0;
   width: 1em;
   height: 1em;
-  font-size: 5vmin;
-  /* background-color: #3498db; */
+  font-size: 10vmin;
   background-color: #ff2d37;
   border-radius: 0.5em;
   box-shadow: 0 0 0 0em rgba(52, 152, 219, 0), 0em 0.05em 0.1em rgba(0, 0, 0, 0.2);

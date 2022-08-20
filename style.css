@@ -292,7 +292,7 @@ p {
 .slider__kontrols {
     display: flex;
     margin-top: 3em;
-    gap: 1.5em;
+    gap: .1em;
 }
 
 .slider_kontrol {
@@ -317,10 +317,10 @@ p {
 
 @keyframes kontrol {
     from {
-        width: 1em;
+        width: .3em;
           }
     to {
-        width: 5em;
+        width: 3em;
     }
 }
 
