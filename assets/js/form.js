@@ -77,18 +77,18 @@ document.addEventListener('DOMContentLoaded', function(){
                 if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
                     // success, show this.responseText here
                     console.log("SUCCESS", this);
-                    form.reset();
+                    // form.reset();
                     openPopupInfo()
                     alert('Запрос отправлен! Ждите звонка.')
                 }
               }
             request.open(this.method, this.action, true);
             request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-            let formData = new FormData(this);
-            for (let key of formData.keys()){
-                console.log(key, formData.get(key));
-            }
+            // let formData = new FormData(this);
+            let formData = 'name=' + name.value + '&tel=' + tel.value;
+
             request.send(formData);
+
         } else {
             alert ('Заполните обязательные поля!')
         }
