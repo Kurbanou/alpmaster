@@ -21,7 +21,7 @@
     box-sizing: border-box;
 }
 
-header {
+.header {
     position: absolute;
     top: 0;
     width: 100%;
@@ -156,11 +156,6 @@ p {
     justify-content: center;
 }
 
-.slider{
-    padding: 100px 0;
-
-}
-
 .slider__inner {
     display: flex;
     flex-direction: column;
@@ -169,12 +164,11 @@ p {
 }
 
 .slider__content{
-    width: 100%;
+    width: 90%;
     display: flex;
     gap: 1%;
     justify-content: center;
     padding: 0;
-
 }
 
 .slide {
@@ -291,7 +285,7 @@ p {
 
 .slider__kontrols {
     display: flex;
-    margin-top: 3em;
+    margin-top: 1.5em;
     gap: .1em;
 }
 

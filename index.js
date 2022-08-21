@@ -77,9 +77,15 @@ document.addEventListener('DOMContentLoaded', function(){
                            },
                          ];
 
+    const header = document.querySelector('.header');
+    let headerHeight = Number(window.getComputedStyle(header).height.slice(0,-2));
+    const slider = document.querySelector('.slider');
+    slider.style.padding = `${headerHeight*2}px 0 ${headerHeight}px 0`;
+
     let index = 0,
         time = 3000,
         timerId = setInterval(nextslide, time);
+
 
 
     function activeSlide(n) {
@@ -177,3 +183,11 @@ document.addEventListener('DOMContentLoaded', function(){
 
 
 });
+
+
+
+
+
+
+
+
