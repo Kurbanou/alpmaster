@@ -632,3 +632,13 @@ ol {
       transform: scale(1);
     }
 }
+
+
+/* video */
+
+.video {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
