@@ -642,3 +642,37 @@ ol {
     justify-content: center;
     gap: 10px;
 }
+.container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 20px 0 20px 0;
+    justify-content: center;
+}
+
+.imagebox{    
+    width: 100%;
+    max-width: 228px;
+}
+
+.imagebox *{
+    width: 100%;
+    display: block;
+    border-radius: .3em;
+    
+}
+
+.videobox {
+    width: 100%;
+    max-width: 228px;    
+}
+
+.videobox *{
+    border-radius: .3em;
+    display: block;
+    border-radius: .3em;
+    height: 100%; 
+    max-width: 228px;
+    max-height: 228px;
+    
+}
