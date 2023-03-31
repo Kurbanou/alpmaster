@@ -650,29 +650,16 @@ ol {
     justify-content: center;
 }
 
-.imagebox{    
-    width: 100%;
-    max-width: 228px;
-}
 
 .imagebox *{
-    width: 100%;
+    width: 228px;
     display: block;
-    border-radius: .3em;
-    
-}
-
-.videobox {
-    width: 100%;
-    max-width: 228px;    
+    border-radius: .3em;    
 }
 
 .videobox *{
     border-radius: .3em;
-    display: block;
-    border-radius: .3em;
-    height: 100%; 
-    max-width: 228px;
-    max-height: 228px;
-    
+    display: block;         
+    width: 228px;
+    height: 228px;    
 }
