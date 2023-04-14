@@ -1,6 +1,7 @@
 @import url(./assets/css/phone.css);
 @import url(./assets/css/form.css);
 @import url(./assets/css/popup.css);
+@import url(./assets/css/viewBox.css);
 
 :root{
     --color-red: #ff2d37;
