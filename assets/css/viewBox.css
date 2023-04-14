@@ -48,8 +48,7 @@
   position: relative;
   padding: 1em;
   background-color: white;  
-  width: 80vh;
-  height: 80vh;
+  width: 80vh;  
 }
 
 .viewBox__body::after {
