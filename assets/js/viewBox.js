@@ -2,11 +2,16 @@
 
 const images = document.querySelectorAll('.imagebox');
 
+
+
 images.forEach(image => {
     image.addEventListener('click', function(){
-        createViewBox();
-        const viewBoxContent = document.querySelector('.viewBoxContent');
-        viewBoxContent.innerHTML = image.innerHTML;    
+        if(window.innerWidth > 600){
+            createViewBox();
+            const viewBoxContent = document.querySelector('.viewBoxContent');
+            viewBoxContent.innerHTML = image.innerHTML;              
+        } else return;
+       
     })
 })
 

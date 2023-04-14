@@ -656,6 +656,7 @@ ol {
     width: 228px;
     display: block;
     border-radius: .3em;    
+    cursor: pointer;
 }
 
 .videobox *{

@@ -30,6 +30,7 @@
   transform: scale(0.04), translateY(9999px);
   overflow: hidden;
   opacity: .8;
+  cursor: pointer;
 }
 
 .open .viewBox__body {
@@ -51,12 +52,61 @@
   height: 80vh;
 }
 
+.viewBox__body::after {
+  
+  -webkit-animation: rotate 1.3s ease-out forwards;
+          animation: rotate 1.3s ease-out forwards;
+  content: 'X';
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  color: white;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  padding: 10px;
+  font-size: 30px;  
+  
+}
+
 .viewBoxContent *{
   width: 100%;  
 }
 
 .over {
-  overflow: hidden;
+  overflow: hidden;  
+}
+
+
+
+@-webkit-keyframes rotate {
+
+  0%{   
+    opacity: 0;
+    transform: rotate(0deg);
+  }
+  50%{   
+    opacity: 0;
+    transform: rotate(0deg);
+  }
+  100% {  
+    opacity: 1;
+    transform: rotate(360deg);  
+  }
+}
+
+@keyframes rotate {
+  0%{   
+    opacity: 0;
+    transform: rotate(0deg);
+  }
+  50%{   
+    opacity: 0;
+    transform: rotate(0deg);
+  }
+  100% {  
+    opacity: 1;
+    transform: rotate(360deg);  
+  }
 }
 
 
@@ -69,26 +119,28 @@
   90%{
     opacity: 0;
     transform: translate3d(0, 36px, 0);
+    
   }
   100% {
     opacity: 1;
     transform: translate3d(0, 0, 0);
-  
+    
   }
 }
+
 @keyframes content {
   0% {
     opacity: 0;
-    transform: translate3d(0, 36px, 0);    
+    transform: translate3d(0, 36px, 0);
   }
   90%{
     opacity: 0;
     transform: translate3d(0, 36px, 0);
+    
   }
   100% {
     opacity: 1;
-    transform: translate3d(0, 0, 0);
-   
+    transform: translate3d(0, 0, 0);      
   }
 }
 
